@@ -1,3 +1,258 @@
-/*body{*/
-/*    background-color: red;*/
-/*}*/
+/*---------- Font ----------*/
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+/*---------- General elements ----------*/
+header {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-top: 60px;
+}
+
+body{
+    margin-top:20px;
+    background:#eee;
+}
+
+/*---------- Navbar ----------*/
+
+/* change the background color */
+.navbar-custom {
+    background-color: #174b7b;
+    font-family: 'Rye', cursive;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #ffbb00;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: #ffbb00;
+}
+
+/*change the brand color*/
+.navbar-custom .navbar-brand{
+    font-family: 'Rye', cursive;
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: white;
+}
+
+.navbar-custom .nav-brand:focus,
+.navbar-custom .nav-brand:hover {
+    color: white;
+}
+
+/*---------- News, Fixtures and Team section ----------*/
+
+section{
+    padding-top: 60px;
+}
+
+.section_heading{
+    font-family: 'Rye', cursive;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #cf0d15;
+}
+
+.section-hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-top: 5px solid rgba(207, 13, 21,1.0);
+    opacity: 1.0;
+}
+
+.internal-hr{
+    margin: 1rem 0;
+    border: 1px;
+    border-top: 1px solid #174b7b;;
+    opacity: 1.0;
+}
+
+.section-image{
+    margin-right: 3rem;
+    border-radius: 10px;
+}
+
+
+.card-format{
+    border-radius: 15px;
+    border: 5px solid #ffbb00;
+}
+
+.news-fixtures a {
+    color: #174b7b;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.news-fixtures a:hover,
+.news-fixtures a:focus{
+   color: #cf0d15;
+}
+
+/*---------- Comment Card ----------*/
+
+. commment-card{
+    padding: 0;
+}
+
+.card-footer{
+    padding: 5px;
+}
+
+#commentSection>.card>.card-body{
+    padding: 5px;
+}
+
+.commment-card>.card-footer>.row>.text-muted{
+    font-size: smaller;
+}
+
+    /*---------- Comment Card ----------*/
+
+/*---------- Footer ----------*/
+footer{
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    color: #6C757D;
+}
+
+footer .social-links a{
+    color: #6C757D;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+
+}
+
+footer .social-links a:hover,
+footer .social-links a:focus {
+    color: #cf0d15;
+}
+
+footer .useful-links p a{
+    color: #6C757D;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+footer .useful-links p a:hover,
+footer .useful-links p a:focus {
+    color: #cf0d15;
+}
+
+.lower-footer{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.lower-footer p a{
+    color: #6C757D;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.lower-footer p a:hover,
+.lower-footer p a:focus {
+    color: #cf0d15;
+}
+
+.profile {
+    position: relative;
+    margin-bottom: 50px;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    z-index: 1;
+    border-radius: 25px;
+    -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+    box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+}
+
+.profile .thumb {
+    position: relative;
+    z-index: 1;
+    border-radius: 25px;
+    margin: 0 auto;
+    /*padding: 30px 30px 0 30px;*/
+    /*background-color: #3f43fd;*/
+    overflow: hidden;
+}
+
+/*Image transition effect inspired by the following code snippet: https://www.bootdey.com/snippets/view/single-advisor-profile*/
+
+.profile .thumb::after {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    position: absolute;
+    width: 150%;
+    height: 90px;
+    bottom: -45px;
+    left: -30%;
+    content: "";
+    background-color: #ffffff;
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+@media only screen and (max-width: 575px) {
+    .profile .thumb::after {
+        height: 160px;
+        bottom: -90px;
+    }
+}
+.profile .thumb .details-info {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    bottom: 0;
+    right: 10px;
+    text-align: right;
+    color: #174b7b;
+}
+.profile .thumb .details-info a {
+    font-size: 14px;
+    color: #020710;
+    padding: 0 5px;
+}
+.profile .thumb .details-info a:hover,
+.profile .thumb .details-info a:focus {
+    color: #cf0d15;
+}
+.profile .thumb .details-info a:last-child {
+    padding-right: 0;
+}
+
+.profile:hover .thumb::after,
+.profile:focus .thumb::after {
+    /*background-color: #070a57;*/
+    background-color:#ffbb00;
+}
+
+.profile:hover .thumb .details-info a,
+.profile:focus .thumb .details-info a {
+    color: #ffffff;
+}
+
+.profile:hover .thumb .details-info a:hover,
+.profile:hover .thumb .details-info a:focus,
+.profile:focus .thumb .details-info a:hover,
+.profile:focus .thumb .details-info a:focus {
+    color: #ffffff;
+}
+
+
